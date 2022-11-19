@@ -23,13 +23,13 @@ function insertItems(items) {
         console.log(item);
         //AND create new card DOM element which will be inserted into the home page
         const itemElement = document.createElement('item');
-        itemElement.setAttribute('id', items.id);
+        itemElement.setAttribute('id', item.id);
         itemElement.classList.add('item');
         // AND insert current element's into new card DOM element
         itemElement.innerHTML = `
-        <h3>${items.name}</h3>
-        <a href="./product.html?identifier=${items.id}">click me</a>
-        <p>${items.text}</p>
+        <h3>${item.name}</h3>
+        <a href="./product.html?identifier=${item.id}">click me</a>
+        <p>${item.text}</p>
     `;
         //AND append (child) this new card DOM element to existing element on page (section tag)
         itemsHolder.appendChild(itemElement);
